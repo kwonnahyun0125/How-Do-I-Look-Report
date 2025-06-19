@@ -230,16 +230,21 @@
   
 
 ### 6.3 주요 커밋/PR 내역
-- feat: seed 데이터 및 스타일/큐레이션/답글 10개 샘플 추가  
-  - prisma/seed.js에 더미 데이터 추가 및 시딩 자동화  
-- fix: style 라우터 DTO 미들웨어 적용  
-  - 모든 스타일 API에 superstruct 기반 validateRequest 미들웨어 적용  
-  - categories, tags, imageUrls 등 유효성 검사 및 에러 메시지 개선  
-- refactor: style 등록/조회/수정 응답 포맷 통일  
-  - 프론트엔드와 연동 위해 categories, tags, imageUrls 응답형식 최종 통일  
-- fix: BigInt price 직렬화 버그 대응  
-- docs: API 명세 및 Postman 예제 갱신  
-- feat: Style API 기능 구현  
+- feat: Style API 기능 구현
+- feat: prisma.
+- feat: seed 데이터 및 스타일/큐레이션 10개 샘플 추가  
+  - prisma/seed.js에 더미 데이터 추가 및 시딩 자동화
+- fix: style 라우터에 DTO 미들웨어 적용(수정)
+- fix: Style FE 에 맞춰서 DTO 제한 사항 부분 수정
+- feat: 에러 로그 DB 저장 구조 개선 (Log.detail 구조화)
+- fix: style 삭제 시 외래키 제약 오류 해결
+- fix: style 응답을 API 명세서 형식에 맞게 수정
+- fix: style 수정 시 이미지 누락 이슈 수정
+- fix: seed 데이터 comment 추가
+- fix: seed 데이터 test 이미지 실사용 이미지 URL로 변환
+- fix: 패스워드 최소길이 8자로 수정되어 seed 데이터 비밀번호 수정
+- 
+  
 
 ### 6.4 API 시나리오 기반 테스트(일부)
 - Postman/프론트에서 실제 등록/수정/조회 반복 테스트 진행  

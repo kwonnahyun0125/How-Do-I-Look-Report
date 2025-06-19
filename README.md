@@ -167,25 +167,56 @@
 
 ### 6.1 스타일(Style) 등록 요청 예시
 - ■ API 요청/응답 예시 (POST /styles)
-```shell
+```json
 {
   "nickname": "나현",
-  "password": "pw12",
-  "title": "여름 오피스룩",
-  "content": "린넨 셔츠와 와이드 슬랙스로 시원하고 단정하게!",
+  "password": "password1234",
+  "title": "여름 데일리룩",
+  "content": "시원하게 입는게 최고!",
     "categories": {
     "top": {
-      "name": "린넨 셔츠",
+      "name": "반팔티",
       "brand": "유니클로",
-      "price": 39900
+      "price": 19900
     },
     "bottom": {
-      "name": "와이드 슬랙스",
+      "name": "숏팬츠",
       "brand": "지오다노",
-      "price": 49900
+      "price": 15900
+    }
+  },
+  "tags": ["캐주얼", "여름", "미니멀"],
+  "imageUrls": [
+    "https://img.example.com/style1.jpg",
+    "https://img.example.com/style2.jpg"
+  ]
+}
+```
+
+■ API 요청/응답 예시 (201 Created)
+```json
+{
+  "id": 1,
+  "nickname": "나현",
+  "title": "여름 데일리룩",
+  "content": "시원하게 입는게 최고!",
+  "viewCount": 0,
+  "curationCount": 0,
+  "createdAt": "2025-06-18T09:12:37.365Z",
+  "categories": {
+    "top": {
+      "name": "반팔티",
+      "brand": "유니클로",
+      "price": 19900
+    },
+    "bottom": {
+      "name": "숏팬츠",
+      "brand": "지오다노",
+      "price": 15900
     }
   },
   "tags": [
+    "캐주얼",
     "미니멀",
     "여름"
   ],
@@ -196,43 +227,10 @@
 }
 ```
 
-■ API 요청/응답 예시 (201 Created)
-```shell
-{
-  "id": 1,
-  "nickname": "나현",
-  "title": "여름 오피스룩",
-  "content": "린넨 셔츠와 와이드 슬랙스로 시원하고 단정하게!",
-  "viewCount": 12,
-  "curationCount": 3,
-  "createdAt": "2025-06-13T11:00:00.000Z",
-  "categories": {
-    "top": {
-      "name": "린넨 셔츠",
-      "brand": "유니클로",
-      "price": 39900
-    },
-    "bottom": {
-      "name": "와이드 슬랙스",
-      "brand": "지오다노",
-      "price": 49900
-    }
-  },
-  "tags": [
-    "미니멀",
-    "여름"
-  ],
-  "imageUrls": [
-    "https://img.example.com/style1.jpg",
-    "https://img.example.com/style2.jpg"
-  ]
-}
-
-
   
 
 ### 6.3 주요 커밋/PR 내역
-- feat: seed 데이터 및 스타일/큐레이션 10개 샘플 추가  
+- feat: seed 데이터 및 스타일/큐레이션/답글 10개 샘플 추가  
   - prisma/seed.js에 더미 데이터 추가 및 시딩 자동화  
 - fix: style 라우터 DTO 미들웨어 적용  
   - 모든 스타일 API에 superstruct 기반 validateRequest 미들웨어 적용  
@@ -255,4 +253,6 @@
 - [DB ERD](https://github.com/gyunam-bark/nb02-how-do-i-look-team1/blob/main/resource/erd.png)  
 - [데이터베이스 Seed](https://github.com/gyunam-bark/nb02-how-do-i-look-team1/wiki/%5B%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%5DSeed)  
 - [Postman 테스트 스크린샷]  
+![스크린샷 2025-06-18 181322](https://github.com/user-attachments/assets/ae03d918-8e6d-4588-8e64-8e6bb8e0139e)
+![스크린샷 2025-06-13 160019](https://github.com/user-attachments/assets/1b353689-da70-4206-998f-ff469c9e2db4)
 

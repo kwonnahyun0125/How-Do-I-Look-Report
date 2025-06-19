@@ -252,6 +252,7 @@
 - [API 명세 Wiki](https://github.com/gyunam-bark/nb02-how-do-i-look-team1/wiki/%5BAPI%5DStyle)  
 - [DB ERD](https://github.com/gyunam-bark/nb02-how-do-i-look-team1/blob/main/resource/erd.png)  
 - [데이터베이스 Seed](https://github.com/gyunam-bark/nb02-how-do-i-look-team1/wiki/%5B%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%5DSeed)
+
 ![스크린샷 2025-06-18 153807](https://github.com/user-attachments/assets/d38021c4-a76c-4879-9137-8ef3ab2ee1fc)
 ![스크린샷 2025-06-18 153820](https://github.com/user-attachments/assets/ce506635-dab1-463b-8ed6-368776b927d7)
 
